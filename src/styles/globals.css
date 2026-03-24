@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #0d0d0f;
+    --text: #f2f2f2;
+    --muted: #bdbdbd;
+    --border: #2a2a2a;
+    --font: 'Press Start 2P', cursive;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    overflow: hidden; /* Prevent scrolling for single-page pixel aesthetic */
+    cursor: default;
+  }
+
+  /* Base resets for pixel game aesthetic */
+  img {
+    image-rendering: pixelated;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
