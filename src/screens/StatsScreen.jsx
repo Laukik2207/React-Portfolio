@@ -42,7 +42,7 @@ export default function StatsScreen({ onNext, onPrev }) {
            <SectionTitle text="PLAYER STATS" />
         </div>
         <div className="text-white text-3xl md:text-5xl font-retro text-right drop-shadow-[4px_4px_0px_#2a2a2a] bg-bg border-4 border-white px-4 py-2 opacity-95">
-          <AnimatedCounter target={70} duration={1.2} />
+          <AnimatedCounter target={100} duration={1.2} />
         </div>
       </div>
 
@@ -93,11 +93,11 @@ export default function StatsScreen({ onNext, onPrev }) {
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeOut" }}
           >
-            <div className="w-56 h-56 bg-border flex items-center justify-center border-4 border-white shadow-[8px_8px_0px_#2a2a2a]">
+            <div className="w-72 h-72 xl:w-80 xl:h-80 bg-border flex items-center justify-center border-4 border-white shadow-[12px_12px_0px_#2a2a2a] overflow-hidden">
               <img 
                 src="/assets/stats.png" 
                 alt="Stats View" 
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover scale-[1.1]"
                 onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }}
               />
               <span className="hidden text-muted text-xs font-retro">STATS.PNG</span>
@@ -108,17 +108,33 @@ export default function StatsScreen({ onNext, onPrev }) {
         {/* Right Col: Achievements & Cert */}
         <div className="flex-1 flex flex-col gap-8 w-full">
           <RPGCard title="ACHIEVEMENTS" className="shadow-[4px_4px_0px_#2a2a2a]">
-            <p className="mb-4 leading-loose">★ <span className="text-white">70+</span> LeetCode Problems Solved</p>
+            <p className="mb-4 leading-loose">★ <span className="text-white">100+</span> LeetCode Problems Solved</p>
             <p className="mb-4 leading-loose">★ <span className="text-white">3★</span> HackerRank</p>
             <p className="mb-4 leading-loose">★ <span className="text-white">JPMorgan Chase</span> Job Simulation</p>
             <p className="mb-4 leading-loose">★ <span className="text-white">AWS</span> Workshop Participant</p>
           </RPGCard>
 
           <RPGCard title="CERTIFICATIONS" className="shadow-[4px_4px_0px_#2a2a2a]">
-            <p className="mb-4 leading-[2]">◈ <span className="text-white">Oracle Cloud Infrastructure</span> 2025 AI Foundations Associate</p>
-            <p className="mb-4 leading-[2]">◈ <span className="text-white">Build Generative AI Apps</span> with No-Code Tools</p>
-            <p className="mb-4 leading-[2]">◈ <span className="text-white">Master Generative AI</span> & Tools / ChatGPT</p>
-            <p className="mb-4 leading-[2]">◈ <span className="text-white">Complete Blender Creator</span> (Udemy)</p>
+            <p className="mb-4 leading-[2]">
+              <a href="https://drive.google.com/file/d/1vmYu-8o66NAxFeHbsDmT7ciMtjZK_k4k/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-white transition-colors group flex items-start gap-2">
+                ◈ <span className="text-white group-hover:underline">Oracle Cloud Infrastructure 2025 AI Foundations Associate</span> <span className="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity mt-1 shrink-0">[↗]</span>
+              </a>
+            </p>
+            <p className="mb-4 leading-[2]">
+              <a href="https://drive.google.com/file/d/1iUDhpACXpH8EX0HAO2ecKpP28EuD_a87/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-white transition-colors group flex items-start gap-2">
+                ◈ <span className="text-white group-hover:underline">Oracle Cloud Infrastructure 2025 Data Platform</span> <span className="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity mt-1 shrink-0">[↗]</span>
+              </a>
+            </p>
+            <p className="mb-4 leading-[2]">
+              <a href="https://drive.google.com/file/d/1bVCVdoc0i7DlkjZTrEnQN7YKQmv_4OzP/view?usp=drive_link" target="_blank" rel="noreferrer" className="hover:text-white transition-colors group flex items-start gap-2">
+                ◈ <span className="text-white group-hover:underline">AWS Workshop</span> <span className="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity mt-1 shrink-0">[↗]</span>
+              </a>
+            </p>
+            <p className="mb-4 leading-[2]">
+              <a href="https://drive.google.com/file/d/14Klj9xtYDPV8y5Tof9zA-EXR3TXXdmrM/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-white transition-colors group flex items-start gap-2">
+                ◈ <span className="text-white group-hover:underline">JP Morgan Certificate</span> <span className="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity mt-1 shrink-0">[↗]</span>
+              </a>
+            </p>
           </RPGCard>
         </div>
       </div>

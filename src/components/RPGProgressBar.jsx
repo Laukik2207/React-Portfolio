@@ -8,13 +8,12 @@ export default function RPGProgressBar({ label, value, delay = 0 }) {
         <span>{label}</span>
         <span className="text-white">{value}%</span>
       </div>
-      <div className="w-full h-5 border-2 border-border bg-bg relative p-0.5">
+      <div className="w-full h-5 md:h-6 border-2 border-white p-1">
         <motion.div
-          className="h-full bg-text"
+          className="h-full bg-white relative"
           initial={{ width: 0 }}
           animate={{ width: `${value}%` }}
-          transition={{ duration: 1, delay, ease: "easeOut" }}
-          style={{ backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 4px, var(--bg) 4px, var(--bg) 6px)' }}
+          transition={{ duration: 1.5, delay, ease: "easeOut" }}
         />
       </div>
     </div>
